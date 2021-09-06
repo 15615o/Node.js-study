@@ -14,7 +14,7 @@ const RedisStore = require('connect-redis')(session);
 dotenv.config();
 const redisClient = redis.createClient({
     url: `redis://${process.env.REDIS_HOST}:${process.env.REDIS_PORT}`,
-    password: process.eventNames.REDIS_PASSWORD,
+    password: process.env.REDIS_PASSWORD,
 });
 const pageRouter = require('./routes/page');
 const authRouter = require('./routes/auth');
